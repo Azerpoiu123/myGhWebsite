@@ -1,27 +1,17 @@
 <html>
 	<head>
-		<title>prototype v001</title>
-		<meta http-equiv="refresh" content="2" />
+		<title>prototype v002</title>
+		<!--<meta http-equiv="refresh" content="2" />-->
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/js2.js"></script>
-		<script>
-			$(function(){
-				//alert('ready');
-			});
-		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<style>
-			a{color:gray;}
-			.MyMenu{
-				color:gray;
-				background-color:darkblue;
-			}
-			.MyMenu:Hover{
-				color:gray;
-				background-color:white;
-				/*box-shadow:2px 0px 5px orange;*/
-			}
+			.mySlides {display:none}
+			.w3-left, .w3-right, .w3-badge {cursor:pointer}
+			.w3-badge {height:13px;width:13px;padding:0}
 		</style>
 	</head>
 	<body style="background-color:green;">
@@ -33,15 +23,33 @@
 						Portail d'orientation
 					</b>
 				</h1>
+				this is a test
+				**************************************************************************
+
+
+	<div class="w3-content w3-display-container" style="max-width:800px;max-height:300px;">
+			  <img class="mySlides" src="img/img1.jpg" style="width:100%;height:100%;">
+			  <img class="mySlides" src="img/img2.jpg" style="width:100%;height:100%;">
+			  <img class="mySlides" src="img/img3.jpg" style="width:100%;height:100%;">
+	  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%;background-color:rgba(37, 39, 64, 0.54);box-shadow:2px 2px 10px rgba(24, 66, 75, 0.85);">
+	    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+	    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+	    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+	    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+	    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+	  </div>
+	</div>
+
+				**************************************************************************
 			</header>
-				<!--Content-->
+				<!-- menu + content -->
 			<div style="text-align:center;" class="">
 							<!--menu-->
 							<div class="col-sm-2 col-xs-12" style="background-color:gray;padding-left:0px;padding-right:0px;">
 								<div class="col-sm-12 col-xs-12">menu</div>
 								<div class="col-sm-12 col-xs-4 MyMenu">
 									<div class="dropdown">
-									<a style="text-decoration:none;" class="dropdown-toggle " data-toggle="dropdown">item 1</a>
+										<a style="text-decoration:none;" class="dropdown-toggle" data-toggle="dropdown">item 1</a>
 										<ul class="dropdown-menu dropdown-menu-left">
 											<li role="presentation"><a role="menuitem" tabindex="-1">coco</a></li>
 											<li><a href="#">Home</a></li>
@@ -53,6 +61,7 @@
 								<div class="col-sm-12 col-xs-4 MyMenu">item 2</div>
 								<div class="col-sm-12 col-xs-4 MyMenu">item 3</div>
 							</div>
+
 							<!--content-->
 							<div class="col-sm-10 col-xs-12" style="background-color:white">
 								content <br>
@@ -98,8 +107,6 @@
 								    </div>
 								  </div> 
 								</div>
-    
-
 							</div>
 			</div>
 				<!--Footer-->
@@ -107,5 +114,50 @@
 				2017 copyright ©
 			</footer>
 		</div>
+
+
+	<script>
+		//var myIndex = 0;//this one is for the auto slide
+		var myIndex = 1;
+		showDivs(myIndex);
+
+		function plusDivs(n) {
+		  showDivs(myIndex += n);
+		}
+
+		function currentDiv(n) {
+		  showDivs(myIndex = n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  if (n > x.length) {myIndex = 1}    
+		  if (n < 1) {myIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		     dots[i].className = dots[i].className.replace(" w3-white", "");
+		  }
+		  x[myIndex-1].style.display = "block";  
+		  dots[myIndex-1].className += " w3-white";
+		}
+//********//  auto slide...:  //********//
+		carousel();
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";  
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1;}    
+		    x[myIndex-1].style.display = "block";  
+		    setTimeout(carousel, 4000); // Change image every 3 seconds
+		}
+	</script>
 	</body>
 </html>
