@@ -1,0 +1,309 @@
+<html>
+	<head>
+		<metaa  ta http-equiv="refresh" content="2" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js\bootstrap.min.js"></script>
+		<script src="js\jquery.js"></script>
+	 	<script src="js/bootstrap.min.js"></script>
+		<script>
+			// When the user clicks on <div>, open the popup
+			function popup1() {
+		    $('div #popup1').toggle("show");
+			}
+			function popup(){
+		    var popup = document.getElementById("popup1");
+		    popup.classList.toggle("show");
+
+		    popup = document.getElementById("popup2");
+		    popup.classList.toggle("show");
+
+		    $('body').addClass();
+
+		    //popup.classList.toggle("show");
+			}
+				//$('body').Toggle();
+
+			$(function(){
+				//alert('ready');
+				//$('body').Toggle();
+				//popup();
+			});
+			/**/
+		</script>
+		<style>
+					.texture{
+					}
+					/* this is the popup css::*/
+					/* Popup container - can be anything you want */
+					.popup {
+					    position: relative;
+					    display: inline-block;
+					    cursor: pointer;
+					}
+					/* The actual popup */
+					.popup .popuptext {
+					    visibility: hidden;
+					    background-color: rgba(24, 66, 75, 0.85);
+					    position: absolute;
+					    top: 60px;
+					    border-radius:30px;
+					    border:1px solid black;
+					    left: 150px;
+					}
+					.popup input{
+						margin:15px 20px;
+						border-radius:10px
+					}
+					/* Toggle this class - hide and show the popup */
+					.popup .show {
+					    visibility: visible;
+					    -webkit-animation: fadeIn 1s;
+					    animation: fadeIn 1s;
+					}
+
+					/* Add animation (fade in the popup) */
+					@-webkit-keyframes fadeIn {
+					    from {opacity: 0;} 
+					    to {opacity: 1;}
+					}
+
+					@keyframes fadeIn {
+					    from {opacity: 0;}
+					    to {opacity:1 ;}
+					}
+/* ********************************************* model ********************************************* */
+
+					/* Full-width input fields */
+					input[type=text], input[type=password] {
+					    width: 100%;
+					    padding: 12px 20px;
+					    margin: 8px 0;
+					    display: inline-block;
+					    border: 1px solid #ccc;
+					    box-sizing: border-box;
+					}
+
+					/* Set a style for all buttons */
+					button {
+					    background-color: #4CAF50;
+					    color: white;
+					    padding: 14px 20px;
+					    margin: 8px 0;
+					    border: none;
+					    cursor: pointer;
+					    width: 100%;
+					}
+
+					button:hover {
+					    opacity: 0.8;
+					}
+
+					/* Extra styles for the cancel button */
+					.cancelbtn {
+					    width: auto;
+					    padding: 10px 18px;
+					    background-color: #f44336;
+					}
+
+					/* Center the image and position the close button */
+					.imgcontainer {
+					    text-align: center;
+					    margin: 24px 0 12px 0;
+					    position: relative;
+					}
+
+					img.avatar {
+					    width: 40%;
+					    border-radius: 50%;
+					}
+
+					.container {
+					    padding: 16px;
+					}
+
+					span.psw {
+					    float: right;
+					    padding-top: 16px;
+					}
+
+					/* The Modal (background) */
+					.modal {
+					    display: none; /* Hidden by default */
+					    position: fixed; /* Stay in place */
+					    z-index: 1; /* Sit on top */
+					    left: 0;
+					    top: 0;
+					    width: 100%; /* Full width */
+					    height: 100%; /* Full height */
+					    overflow: auto; /* Enable scroll if needed */
+					    background-color: rgb(0,0,0); /* Fallback color */
+					    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+					    padding-top: 60px;
+					}
+
+					/* Modal Content/Box */
+					.modal-content {
+					    background-color: #fefefe;
+					    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+					    border: 1px solid #888;
+					    width: 80%; /* Could be more or less, depending on screen size */
+					}
+
+					/* The Close Button (x) */
+					.close {
+					    position: absolute;
+					    right: 25px;
+					    top: 0;
+					    color: #000;
+					    font-size: 35px;
+					    font-weight: bold;
+					}
+
+					.close:hover,
+					.close:focus {
+					    color: red;
+					    cursor: pointer;
+					}
+
+					/* Add Zoom Animation */
+					.animate {
+					    -webkit-animation: animatezoom 0.6s;
+					    animation: animatezoom 0.6s
+					}
+
+					@-webkit-keyframes animatezoom {
+					    from {-webkit-transform: scale(0)} 
+					    to {-webkit-transform: scale(1)}
+					}
+					    
+					@keyframes animatezoom {
+					    from {transform: scale(0)} 
+					    to {transform: scale(1)}
+					}
+
+					/* Change styles for span and cancel button on extra small screens */
+					@media screen and (max-width: 300px) {
+					    span.psw {
+					       display: block;
+					       float: none;
+					    }
+					    .cancelbtn {
+					       width: 100%;
+					    }
+					}
+		/*           *****************          */
+		</style>
+
+	</head>
+
+	<body id="testpop">
+				<!--Header-->
+		<div class="container">
+			<header class="nav navbar-default">
+				<h1>
+					<b>
+						Portail d'orientation
+					</b>
+				</h1>
+			</header>
+				<!--Container-->
+			<div class="MyContainer">
+							<!--menu-->
+							<div class="MyMenu col-sm-4 col-xs-12">
+								menu
+							</div>
+							<!--content-->
+							<div class=" MyContent col-sm-8 col-xs-12">
+								content
+							</div>
+			</div>
+			<p>testtttttttt</p>
+			</div>
+				<div class="popup" >
+					this is a test:
+					<div class="popupText" id="popup1">
+						<input type="text" placeholder=" Adress"/>
+						<input type="text" placeholder=" Mot de Pass"/>
+					</div>
+				</div>
+				<div class="popup" >
+					this is a test:
+					<div class="popupText" id="popup2" style="top:250px;left:250px;">
+						<input type="submit" value="submit" class="btn btn-danger" />
+					</div>
+				</div>
+<!-- ********************************************************** -->
+
+				<h2>Modal Login Form</h2>
+
+				<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+				<div id="id01" class="modal container">
+				  
+				  <form class="modal-content animate" action="/action_page.php">
+				    <div class="imgcontainer">
+				      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+				      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+				    </div>
+
+				    <div class="container">
+				      <label><b>Username</b></label>
+				      <input type="text" placeholder="Enter Username" name="uname" required>
+
+				      <label><b>Password</b></label>
+				      <input type="password" class="col-lg-8" placeholder="Enter Password" name="psw" required>
+				        
+				      <button type="submit">Login</button>
+				      <input type="checkbox" checked="checked"> Remember me
+				    </div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw">Forgot <a href="#">password?</a></span>
+				    </div>
+				  </form>
+				</div>
+
+				<script>
+				// Get the modal
+				var modal = document.getElementById('id01');
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+				    if (event.target == modal) {
+				        modal.style.display = "none";
+				    }
+				}
+				</script>
+<!-- ********************************************************** -->
+
+				<h2>My Modal Login Form</h2>
+
+				<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">My Login</button>
+
+				<div id="id02" class="modal">
+				  
+				  <form class="modal-content animate" action="/action_page.php">
+
+				    <div class="container">
+				      <label><b>Username</b></label>
+				      <input type="text" placeholder="Enter Username" name="uname" required>
+
+				      <label><b>Password</b></label>
+				      <input type="password" placeholder="Enter Password" name="psw" required>
+				        
+				      <button type="submit">Login</button>
+				      <input type="checkbox" checked="checked"> Remember me
+				    </div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw">Forgot <a href="#">password?</a></span>
+				    </div>
+				  </form>
+				</div>
+
+	</body>
+	
+</html>
