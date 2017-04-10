@@ -29,10 +29,10 @@ button {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn,.signupbtn {float:left;width:50%}
+.cancelbtn,.btnGo {float:left;width:50%}
 
 /* Add padding to container elements */
-.container {
+.Mycontainer {
     padding: 16px;
 }
 
@@ -84,7 +84,7 @@ button {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
+    .cancelbtn, .btnGo {
        width: 100%;
     }
 }
@@ -97,47 +97,19 @@ button {
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content animate" action="/action_page.php">
-    <div class="container">
+  <form class="modal-content animate">
+    <div class="Mycontainer">
 
-    <label for="fname"><b>First Name</b></label>
-    <input id="fname" type="text" placeholder="Enter Your First Name" name="fname" required>
-
-    <label for="lname"><b>Last Name</b></label>
-    <input id="lname" type="text" placeholder="Enter Your First Name" name="fname" required>
-
-    <label for="login"><b>Login</b></label>
-    <input id="login" type="text" placeholder="Enter Your Login" name="login" required>
-
-    <label for="bDate"><b>Birth Date</b></label>
-    <input id="bDate" type="text" placeholder="Enter Your Birth Date" name="bDate" required>
-
-    <label for="city"><b>City</b></label>
-    <input id="city" type="text" placeholder="Enter Your City" name="city" required>
-
-    <label for="adress"><b>Home Adress</b></label>
-    <input id="adress" type="text" placeholder="Enter Your Adress" name="adress" required>
-
-    <label for="email"><b>Email</b></label>
-    <input id="email" type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input id="psw" type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="rpsw"><b>Repeat Password</b></label>
-    <input id="rpsw" type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-  <!-- *********************         ********************* -->
-    <input id="checkbox" type="checkbox" checked="checked"> <label for="checkbox">Remember me</label>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
+<h1>hi</h1>
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="btnGo">Go</button>
       </div>
     </div>
   </form>
 </div>
+
+<div id="id02" class="modal"><h1>hello</h1></div>
 
 <script>
 // Get the modal
@@ -145,6 +117,9 @@ var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    } modal = document.getElementById('id02');
     if (event.target == modal) {
         modal.style.display = "none";
     }
