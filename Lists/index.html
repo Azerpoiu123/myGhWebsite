@@ -1,0 +1,147 @@
+<html>
+	<head>
+		<title>prototype v002</title>
+		<!--<meta http-equiv="refresh" content="2" />-->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/js2.js"></script>
+		<script src="js/data.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<style>
+			.mySlides {display:none}
+			.w3-left, .w3-right, .w3-badge {cursor:pointer}
+			.w3-badge {height:13px;width:13px;padding:0}
+	
+	</style>
+	<!-- this is the end of the message up there-->
+
+	</head>
+	<body style="background-color:green;">
+				<!--Header-->
+		<div class="container">
+			<header style="background-color:darkgreen;" class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="color:gray;text-align:center;padding:0px;">
+				<h1 class="" style="background-color:yellow;margin:0px;padding:15px 10px 10px 10px;">
+					<b class="visible-xs-hidden">
+						<a href="#" onclick="fixtest();">Portail d'orientation</a>
+					</b>
+				</h1>
+				<div class="container col-sm-12 col-xs-12 col-md-12 col-lg-12">
+					<div class="w3-content w3-display-container" style="max-width:800px;max-height:300px;">
+							  <img class="mySlides" src="img/img1.jpg" style="width:100%;height:100%;">
+							  <img class="mySlides" src="img/img2.jpg" style="width:100%;height:100%;">
+							  <img class="mySlides" src="img/img3.jpg" style="width:100%;height:100%;">
+							  <img class="mySlides" src="img/img4.jpg" style="width:100%;height:100%;">
+							  <img class="mySlides" src="img/img5.jpg" style="width:100%;height:100%;">
+							  <img class="mySlides" src="img/img6.jpg" style="width:100%;height:100%;">
+							  <img class="mySlides" src="img/img7.jpg" style="width:100%;height:100%;">
+					  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%;background-color:rgba(37, 39, 64, 0.54);box-shadow:2px 2px 5px black">
+					    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+					    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+					    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+					    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+					    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+					    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+					    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+					    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
+					    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(7)"></span>
+					  </div>
+					</div>
+				</div>
+
+			</header>
+				<!-- menu + content -->
+			<div style="text-align:center;" class="">
+							<!--menu-->
+							<div class="col-sm-2 col-xs-12" style="background-color:gray;padding-left:0px;padding-right:0px;">
+								<div class="col-sm-12 col-xs-12">menu</div>
+								<div class="col-sm-12 col-xs-4 MyMenu">
+									<div class="dropdown">
+										<a style="text-decoration:none;" class="dropdown-toggle" data-toggle="dropdown">item 1</a>
+										<ul class="dropdown-menu dropdown-menu-left">
+											<li role="presentation"><a role="menuitem" tabindex="-1">coco</a></li>
+											<li><a href="#">Home</a></li>
+											<li><a href="#">page 2</a></li>
+											<li><a href="#">page 3</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-sm-12 col-xs-4 MyMenu">item 2</div>
+								<div class="col-sm-12 col-xs-4 MyMenu">item 3</div>
+							</div>
+
+							<!--content-->
+							<div class="col-sm-10 col-xs-12" style="background-color:white">
+								content <br>
+								<div class="">
+								  <h2>Portail d'Orientation</h2>
+								  <p><strong>Info:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+								  <div id="contentPlace">
+								  	
+								  </div>
+								</div>
+							</div>
+			</div>
+				<!--Footer-->
+			<footer class="navbar-inverse" style="color:silver;text-shadow:1.5px 1.5px white;text-align:center;font-family:'Consolas';">
+				2017 copyright ©
+			</footer>
+		</div>
+
+
+	<script>
+	$(function(){
+		$('#contentPlace').html(ShowAllIn());
+		on();
+
+	})
+		//var myIndex = 0;//this one is for the auto slide
+		var myIndex = 0;
+		showDivs(myIndex);
+
+		function plusDivs(n) {
+		  showDivs(myIndex += n);
+		}
+
+		function currentDiv(n) {
+		  showDivs(myIndex = n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("demo");
+		  if (n > x.length) {myIndex = 1}    
+		  if (n < 1) {myIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		     dots[i].className = dots[i].className.replace(" w3-white", "");
+		  }
+		  x[myIndex-1].style.display = "block";  
+		  dots[myIndex-1].className += " w3-white";
+		}
+//********//  auto slide...:  //********//
+		carousel();
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			    dots[i].className = dots[i].className.replace(" w3-white", "");
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1;}    
+			x[myIndex-1].style.display = "block";  
+			dots[myIndex-1].className += " w3-white";
+		    setTimeout(carousel, 5000); // Change image every 3 seconds
+		}	
+		</script>
+	</body>
+</html>

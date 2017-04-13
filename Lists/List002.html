@@ -6,7 +6,6 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/js2.js"></script>
-		<script src="js/data.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<style>
@@ -18,11 +17,6 @@
 
 			}
 		</style>
-		<script>
-			$(function(){
-				$('.panel-group').append(ShowAll());
-			});
-		</script>
 	</head>
 	<body style="background-color:green;">
 				<!--Header-->
@@ -34,21 +28,6 @@
 							<!--content-->
 							<div class="col-md-9 col-sm-10 col-xs-12" style="background-color:white">
 								  <div class="panel-group" id="accordion">
-								    <div class="panel panel-default">
-								      <div class="panel-heading">
-								          <a data-toggle="collapse" data-parent="#accordion" href=".collapse1">
-								          	<img src="img/img1.jpg" width="90%" height="40%" alt="">
-										    <div class="collapse1 panel-collapse collapse in">
-										    	<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-										    </div>
-								          </a>
-								      </div>
-								      <div class="collapse1 panel-collapse collapse">
-								        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-								        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-								        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-								      </div>
-								    </div>
 
 								    <div class="panel panel-default">
 								      <div class="panel-heading">
@@ -60,6 +39,22 @@
 								          </a>
 								      </div>
 								      <div class="collapse2 panel-collapse collapse">
+								        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+								        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+								      </div>
+								    </div>
+								    
+								    <div class="panel panel-default">
+								      <div class="panel-heading col-lg-6 col-md-6 col-sm-6 col-xs-6">
+								          <a data-toggle="collapse" data-parent="#accordion" href=".collapse1">
+								          	<img src="img/img1.jpg" width="100%" height="40%" alt="">
+										    <div class="collapse1 panel-collapse collapse in">
+										    	<div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+										    </div>
+								          </a>
+								      </div>
+								      <div class="collapse1 panel-collapse collapse col-lg-6 col-md-6 col-sm-6 col-xs-6">
 								        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
 								        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 								        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
