@@ -167,3 +167,43 @@ function fixtest(){
 	}
 	alert(ch);
 }
+  ///////////////////////////////////////////////////////////////////////////////////
+/////////////////           this is the segend version            ////////////////////
+  /////////////////////////////////////////////////////////////////////////////////
+
+
+function ShowOne_v002(i){
+		var ch = "";
+			ch += '<div style="background-color:gray;color:white;height:250px;margin:0px;padding:0px;margin-bottom:10px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+			ch += '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="background-color:silver;height:100%;margin:0px;padding:0px;">';
+			ch += '<img src="img/'+ListSchool[i].FirstImg()+'.jpg" height="100%" width="100%" alt=""/>';
+			ch += '</div>';
+			ch += '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="background-color:green;height: 100%;padding-top:50px;">';
+			ch += ListSchool[i].Description;
+			ch += '</div>';
+			ch += '</div>';
+		return ch;
+}
+function ShowAll_v002(){
+	var ch = "";alert(ListSchool.length);
+	for (var i = 0; i < ListSchool.length; i++) {
+		ch += ShowOne_v002(i)+"\n";
+	}
+	return ch;
+}
+
+ /////////////////////////////////////////////////////////////////////////
+////////////////////////        finding querys         ////////////////////
+ ////////////////////////////////////////////////////////////////////////
+
+    /////////     Schools By cityName and Type(public or private)     /////////
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
