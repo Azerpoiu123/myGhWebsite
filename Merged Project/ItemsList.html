@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="prefresh" content="1"/>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/data.js"></script>
+		<link rel="stylesheet" href="css/SearchMenu.css" type="text/css">
+		<script>
+			$(function(){
+					//alert("f = "+$('#ctg1').val()+" j = "+$('#ctg2').val()+" type = "+$('#radio-group :checked').val());
+				$('.container #content').html(ShowAll_v002());
+				$('#Search').click(function (){
+
+			        if($("#all:checked").length>0){
+			        	$('.container #content').html(ShowAll_v002());
+			        	//alert('checked');
+					}
+					else{
+						$('.container #content').html(Search_v002($('#ctg2').val(),$('#radio-group :checked').val(),$('#keyword').val()));
+						//alert('not checked');
+					}
+				});
+			});
+		</script>
+		<style>
+		body{
+			background-color:gray;
+		}
+		#SearchMenu ul li input[type="text"]{
+			border-radius:5px;
+			margin:0;
+			padding:5px 20px;
+		}
+		</style>
+	</head>
+	<body style="">
+		<div class="container">
+			<h2 style="color:yellow;font-size:32px;">Items List</h2>
+			<br/>
+			<div id="SearchMenu">
+				<ul>
+					<li>City&nbsp;
+						<select name="ctgJ" id="ctg2">
+							<option value="Tanger">Tanger</option>
+							<option value="Asila">Asila</option>
+							<option value="Fes">Fes</option>
+							<option value="Casa">Casa</option>
+						</select>
+					</li>
+					<li>
+						<div id="radio-group">Public
+							<input type="radio" name="type" value="1" checked="checked" />&nbsp;Private
+							<input type="radio" name="type" value="0" />
+						</div> 
+					</li>
+					<li>
+						<input id="keyword" type="text" style="color: #555;" placeholder="key word"/>
+					</li>
+					<li>
+						Display All
+						<input id="all" type="checkbox"/>
+					</li>
+				</ul>
+				<input id="Search" type="submit" value="Search"/>
+			</div>
+		<div id="content">
+			
+		</div>
+		</div>
+
+
+
+
+	</body>
+</html>

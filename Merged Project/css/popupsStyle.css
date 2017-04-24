@@ -1,0 +1,104 @@
+
+        .popUps{
+            font-family: 'consolas';
+            position:absolute;
+        }
+        .popBody{
+            width:210px;
+            z-index:1;
+            position:relative;
+            background-color:rgba(90,90,90,0.55);color:silver;
+            /*background-color:rgb(220, 220, 250);color:black;*/
+            padding:25px 30px;
+            border-radius:5px;
+        }
+        .popBody .popInput{
+            margin-left:15px;
+            width:150px;
+            padding-top:5px;
+            padding-bottom:5px; 
+            margin-top:10px;
+        }
+        .popBody input[type="button"],input[type="submit"]{
+            border:none;
+            color:white;
+            background-color:green;
+            padding:10px 20px;
+            margin-left:150px;
+            margin-top:10px;
+        }
+        .popBody input,select{
+            cursor:pointer;
+        }
+        /* --------------      radio group button      ------------- */
+            .RGBContainer{
+                margin:0px;
+                padding:0px;
+            }
+            .RGB{
+                display:inline-block;
+                margin:0px;
+                padding:0px;
+                border:2px solid white;
+                border-radius:5px;
+                overflow:hidden ;
+                list-style-type:none;
+            }
+            .RGB .rb{
+                cursor:pointer;
+                float:left;
+                margin:0px;
+                color:white;
+                background-color:silver;
+                color:#444;
+                padding:5px 5px;
+            }
+
+
+            .RGB .rbActive{
+                cursor:pointer;
+                float:left;
+                margin:0px;                
+                background-color:green;
+                color:gray;
+                padding:5px 5px;
+            }
+            .RGB .rbActive:hover{
+                background-color:darkgreen;
+                color:black;
+                padding:5px;
+            }
+            .RGB .rbActive:active{
+                color:gray;
+                background-color:gray;
+                color:white;
+                padding:5px;
+            }
+            .RGB .rb:hover{
+                color:gray;
+                background-color:gray;
+                color:white;
+                padding:5px;
+            }
+            .RGB .rb:active{
+                background-color:darkgreen;
+                color:black;
+                padding:5px;
+            }
+            /*
+            */
+            /*   this is the overlay css of the popups*/
+            #overlay {
+                position: fixed;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,0.75);
+                z-index: 2;
+            }
+
+        /*///////////////////////////////////////////////////////////*/

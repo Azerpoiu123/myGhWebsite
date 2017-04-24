@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>this is a test</title>
+        <script src="js/jquery.js"></script>
+        <link rel="stylesheet" href="css/popupsStyle.css">
+        <script src="js/popupsJs.js"></script>
+        <script>
+            $(function(){
+                   // startPopin();
+            });
+        </script>
+    </head>
+    <body style="background-color:white;">
+    
+    <input type="button" value="Orienter-Moi" onclick="startPopin();" />
+        <div id="overlay" class="popUps">
+            <div class="popBody" style="top:100px;left:100px;">
+                this is popup 0 <br/>
+                <select name="selecter" class="popInput" placeholder="this is required">
+                    <option value="item1">item1</option>
+                    <option value="item2">item2</option>
+                    <option value="item3">item3</option>
+                </select>
+                <input type="button" value="Go !" onclick="switchingOn(1);" />
+            </div>
+            <div class="popBody" style="top:-10px;left:390px;">
+                this is popup 1 <br/>
+                <select name="selecter" class="popInput" placeholder="this is required">
+                    <option value="item1">item1</option>
+                    <option value="item2">item2</option>
+                    <option value="item3">item3</option>
+                </select>
+                <input type="button" value="Go !" onclick="switchingOn(2);" />
+            </div>
+            <div class="popBody" style="top:10px;left:200px;">
+                this is popup 2 <br/>
+                <div class="RGBContainer popInput">
+                    <ul class="RGB">
+                        <li class="rbActive">Public</li>
+                        <li class="rb">Private</li>
+                    </ul>
+                </div>
+                <input type="submit" value="Go !" onclick="show();stopPopin();" /><br/>
+            </div>
+        </div>
+
+    </body>
+</html>

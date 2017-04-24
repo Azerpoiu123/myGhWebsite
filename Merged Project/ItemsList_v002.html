@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="prefresh" content="1"/>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/data.js"></script>
+		<script>
+			$(function(){
+					//alert("f = "+$('#ctg1').val()+" j = "+$('#ctg2').val()+" type = "+$('#radio-group :checked').val());
+				$('.container').html(ShowAll_v002());
+				$('#Search').click(function (){
+					$('.container').html(Search($('#ctg2').val(),$('#radio-group :checked').val()));
+				});
+			});
+		</script>
+		<style>
+		</style>
+	</head>
+	<body style="background-color:gray;">
+			<h2 style="color:yellow;font-size:32px;">Items List</h2>
+			<br/>
+			<div id="SearchMenu">
+				<ul>
+					<li>City  
+						<select name="ctgJ" id="ctg2">
+							<option value="Tanger">Tanger</option>
+							<option value="Asila">Asila</option>
+							<option value="Fes">Fes</option>
+							<option value="Casa">Casa</option>
+						</select>
+					</li>
+					<li>
+						<div id="radio-group">public
+							<input type="radio" name="type" value="1" checked="checked" />private
+							<input type="radio" name="type" value="0" />
+						</div> 
+					</li>
+				</ul>
+				<input id="Search" type="submit" value="Search"/>
+			</div>
+		<div class="container">
+		this is the resulta
+		</div>
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,96 @@
+
+		#SearchMenu{
+			border-radius: 100px;
+			background-color: silver;
+			height: 80px;
+			margin-bottom: 25px;
+		}
+		#SearchMenu ul{
+			display:inline-block;
+			list-style-type:none;
+			color:white;
+			font-family: 'consolas';
+		}
+		#SearchMenu ul li{
+			outline: none;
+			float:left;
+			margin:5px;
+			padding:10px 20px;
+			background-color: darkgreen;
+			border-radius: 5px;
+		}
+		#SearchMenu ul li select{
+			color:#555;
+		}
+		#SearchMenu ul li:hover{
+			background-color: seagreen;
+		}
+		#SearchMenu #Search{
+			outline:none;
+			float:right;
+			border:none;
+			color:gray;
+			background-color: darkblue;
+			margin:10px 20px;
+			padding:10px 20px;
+			font-size:24px;
+  			box-shadow: 0 7px #999;
+			border-radius: 20px;
+		}
+		#SearchMenu #Search:hover{
+			color:white;
+			background-color: darkblue;
+			cursor:pointer;
+		}
+		#SearchMenu #Search:active {
+		  box-shadow: 0 4px #666;
+		  transform: translateY(4px);
+		}
+
+		@media screen and (min-width: 1000px) {
+		    #SearchMenu{
+				position: relative;
+		    	padding-top:10px; 
+		    	padding-right:10px;
+		    	height: 80px;
+		    	border-radius:20px;
+			}
+			#SearchMenu #Search{
+				margin-top:0px;
+				position: absolute;
+				top:5px;
+				right:5px;
+			}
+		}
+		@media screen and (max-width: 1000px) {
+		    #SearchMenu{
+		    	position: relative;
+		    	padding-top:10px; 
+		    	padding-right:10px;
+		    	height: 150px;
+		    	border-radius:20px;
+			}
+			#SearchMenu #Search{
+				margin-top:0px;
+				position: absolute;
+				bottom:5px;
+				right:5px;
+			}
+		}
+		@media screen and (max-width: 490px) {
+		    #SearchMenu{
+		    	position: relative;
+		    	padding-top:10px; 
+		    	padding-right:10px;
+		    	height: 250px;
+		    	border-radius:20px;
+			}
+			#SearchMenu #Search{
+				margin-top:0px;
+				font-size:18px;
+				padding:8px 13px;
+				position: absolute;
+				bottom:5px;
+				right:5px;
+			}
+		}
